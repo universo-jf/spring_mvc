@@ -10,6 +10,28 @@ public class Student {
 	
 	private LinkedHashMap <String, String> countryOptions;
 	
+	private String favoriteLanguage;
+	private String[] operationSystems;
+
+	
+	public String getFavoriteLanguage() {
+		return favoriteLanguage;
+	}
+
+	public void setFavoriteLanguage(String favoriteLanguage) {
+		this.favoriteLanguage = favoriteLanguage;
+	}
+
+	public void setOperationSystems(String[] operationSystems) {
+		System.out.println(operationSystems.toString());
+		this.operationSystems = operationSystems;
+	}
+	
+	public String[] getOperationSystems() {
+		System.out.println(operationSystems);
+		return operationSystems;
+	}
+
 	public String getCountry() {
 		return country;
 	}
