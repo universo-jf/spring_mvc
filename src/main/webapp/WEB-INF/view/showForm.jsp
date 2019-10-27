@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Form</title>
+ 
+
 </head>
 <body>
 	
@@ -13,6 +15,9 @@
 	<br><br>
 	Hello, ${ param.studentName }
 	
+	<br><br>
 	
+	Message: ${ message }
+
 </body>
 </html>
