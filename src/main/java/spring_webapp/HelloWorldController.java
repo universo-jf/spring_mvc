@@ -22,6 +22,7 @@ public class HelloWorldController {
 //	Rota: /hello/processForm
 	@RequestMapping("/processForm")
 	public String processForm() {
+		System.out.println("show form");
 		return "showForm";
 	}
 	
@@ -39,7 +40,7 @@ public class HelloWorldController {
 			Model model) {
 		
 		studentName = studentName.toUpperCase();
-		
+		System.out.println(studentName);
 		model.addAttribute("message", "Hello " + studentName);
 		return "showForm";
 	}

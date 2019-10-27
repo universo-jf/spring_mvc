@@ -24,9 +24,7 @@
 	Operation Systems 
 	<ul>
 		<c:forEach var="opSys" items="${ student.operationSystems }">
-			
 			<li> ${ opSys } </li>
-		
 		</c:forEach>
 	</ul>
 </body>
