@@ -1,6 +1,6 @@
 **Branch: 1- Config**
 
-Repositório com as configurações iniciais para uma aplicação web com Spring MVC
+Branch com as configurações iniciais para uma aplicação web com Spring MVC
 
 **Arquivos importantes de configuração:**
 
