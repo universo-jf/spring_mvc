@@ -8,22 +8,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-// Adiciona um nível anterior ao path
-// Todas as rotas do controller terão o /hello/{rota}
+/* 
+ * Adiciona um nível anterior ao path
+ * Todas as rotas do controller terão o /hello/{rota}              //Refactor: Comentarios usando // s� devem ser usados para anota�oes na frente do codigo
+ */
+
 @RequestMapping("/hello")
 public class HelloWorldController {
 
-//	Rota: /hello/hello
-	@RequestMapping("/hello")
+/*
+ * Rota: /hello/hello 														
+ */
+	@RequestMapping("/hello")									   
 	public String hello() {
-		return "hello";
+		String message = "hello";								   
+		return message;											   //Refactor: O return deve sempre retornar uma variavel e nao um texto			
 	}
 
-//	Rota: /hello/processForm
+/*
+ * Rota: /hello/processForm							           	   //Refactor: Comentarios usando // s� devem ser usados para anota�oes na frente do codigo
+ */	
 	@RequestMapping("/processForm")
 	public String processForm() {
 		System.out.println("show form");
-		return "showForm";
+		String message = "showForm";
+		return message;      								  //Refactor: O return deve sempre retornar uma variavel e nao uma String
 	}
 	
 	@RequestMapping("/processFormV2")
@@ -31,7 +40,8 @@ public class HelloWorldController {
 		String studentName = request.getParameter("studentName").toUpperCase();
 		System.out.println(request.getParameter("studentName"));
 		model.addAttribute("message", studentName);
-		return "showForm";
+		String message = "showForm"; 
+		return message;										 //Refactor: O return deve sempre retornar uma variavel e nao um texto
 	}
 	
 	@RequestMapping("/processFormV3")
@@ -42,6 +52,7 @@ public class HelloWorldController {
 		studentName = studentName.toUpperCase();
 		System.out.println(studentName);
 		model.addAttribute("message", "Hello " + studentName);
-		return "showForm";
+		String message = "showForm";
+		return message;                                      //Refactor: O return deve sempre retornar uma variavel e nao um texto
 	}
 }
