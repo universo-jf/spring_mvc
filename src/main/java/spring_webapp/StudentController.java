@@ -14,12 +14,13 @@ public class StudentController {
 		
 		Student student = new Student();
 		studentModel.addAttribute("student", student);
-		return "student-form";
+		String message = "student-form"; 
+		return message; 												//Refactor: O return deve sempre retornar uma variavel e nao um texto
 	}
 	
 	@RequestMapping("/processForm")
 	public String processForm(@ModelAttribute("student") Student studentModel) {
-		
-		return "student-confirmation";
+		String message = "student-confirmation";
+		return message;													//Refactor: O return deve sempre retornar uma variavel e nao um texto
 	}
 }
