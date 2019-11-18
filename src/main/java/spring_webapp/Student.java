@@ -2,11 +2,26 @@ package spring_webapp;
 
 import java.util.LinkedHashMap;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class Student {
 	
+	@NotNull(message="Obrigatório")
+	@NotBlank(message="Obrigatório")
 	private String firstName;
+	@Size(min=1, message="Pelo menos 1 char")
 	private String lastName;
 	private String country;
+	@NotNull(message="Obrigatório")
+	@Min(value=10, message="Não pode ser menor que 10")
+	@Max(value=100, message="Não pode ser maior que 100")
+	private Integer age;
 	
 	private LinkedHashMap <String, String> countryOptions;
 	
@@ -68,6 +83,14 @@ public class Student {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 
 }

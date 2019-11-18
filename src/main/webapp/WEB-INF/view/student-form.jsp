@@ -6,6 +6,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+	.error {color: red}
+</style>
 <meta charset="UTF-8">
 <title>Student Form</title>
 </head>
@@ -14,9 +17,12 @@
 	<form:form action="processForm" modelAttribute="student">
 	
 		First Name: <form:input path="firstName"/>
+		<form:errors path="firstName" cssClass="error"/>
 		<br>
 		
+		
 		Last Name: <form:input path="lastName"/>
+				<form:errors path="lastName" cssClass="error"/>
 		
 		<br>
 		
@@ -25,6 +31,11 @@
 		</form:select>
 		
 		<br><br>
+		
+		Age: 
+		<form:input path="age"/>
+		<form:errors path="age" cssClass="error"/>
+		<br>
 		
 		Favorite Language: <br>
 		
